@@ -218,8 +218,8 @@ export const localQuestions = [
 ];
 
 // ----------------- Fetch Questions -----------------
-export async function fetchQuestions(amount = 10) {
-  const API_URL = `https://opentdb.com/api.php?amount=${amount}&type=multiple`;
+export async function fetchQuestions(amount = 10, difficulty = "easy") {
+  const API_URL = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=multiple`;
 
   try {
     const res = await fetch(API_URL);
@@ -235,17 +235,16 @@ export async function fetchQuestions(amount = 10) {
     return normalizeOpenTDB(data.results).slice(0, amount);
   } catch (error) {
     console.warn("⚠️ Falling back to local questions:", error.message);
-    return shuffle(localQuestions).slice(0, amount);
+
+    // filter local questions by difficulty
+    const filtered = localQuestions.filter((q) => q.difficulty === difficulty);
+    return shuffle(filtered).slice(0, amount);
   }
 }
 
 // ----------------- High Scores -----------------
 const KEY = "quizly_highscores_v1";
 
-/**
- * Load high scores from localStorage
- * @returns {Array} high score entries
- */
 export function loadHighScores() {
   try {
     const raw = localStorage.getItem(KEY);
@@ -256,16 +255,14 @@ export function loadHighScores() {
   }
 }
 
-/**
- * Save a new score into localStorage
- * Keeps only top 10 scores sorted by percent
- * @param {Object} entry - { correct, total, percent, date }
- */
 export function saveScore(entry) {
   if (!entry || typeof entry.percent !== "number") return;
 
   const scores = loadHighScores();
-  scores.push(entry);
+  scores.push({
+    ...entry,
+    date: entry.date || new Date().toISOString(),
+  });
 
   // Sort by percent (descending), then date (newest first)
   scores.sort((a, b) => {

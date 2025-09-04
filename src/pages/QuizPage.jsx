@@ -197,23 +197,27 @@ export default function QuizPage() {
 
       {/* Confirmation Modal */}
       {showConfirm && (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg shadow-lg p-6 max-w-md w-full text-center">
-            <h2 className="text-lg font-semibold mb-4">Submit Quiz?</h2>
-            <p className="mb-4">
-              You still have <strong>{unanswered}</strong> unanswered question
-              {unanswered !== 1 ? "s" : ""}.
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-600 text-white rounded-2xl shadow-2xl p-8 max-w-md w-full transform transition-all scale-100 hover:scale-[1.02]">
+            <h2 className="text-2xl font-bold mb-4">Submit Quiz?</h2>
+            <p className="mb-6 text-lg">
+              You still have{" "}
+              <span className="font-semibold text-yellow-300">
+                {unanswered}
+              </span>{" "}
+              unanswered question{unanswered !== 1 ? "s" : ""}.
             </p>
-            <div className="flex justify-center gap-4">
+
+            <div className="flex justify-center gap-6">
               <button
                 onClick={() => setShowConfirm(false)}
-                className="rounded bg-gray-500 px-4 py-2 text-white hover:bg-gray-600"
+                className="rounded-lg bg-gray-800 px-5 py-2 text-white font-semibold shadow hover:bg-gray-900 transition"
               >
                 ⟵ Return
               </button>
               <button
                 onClick={finishQuiz}
-                className="rounded bg-green-600 px-4 py-2 text-white hover:bg-green-700"
+                className="rounded-lg bg-green-500 px-6 py-2 text-white font-semibold shadow hover:bg-green-600 transition"
               >
                 ✅ Submit
               </button>
