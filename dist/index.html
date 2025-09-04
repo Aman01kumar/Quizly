@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- ✅ Meta & Encoding -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ✅ Title & Description -->
+    <title>Quizly — Interactive Quiz App</title>
+    <meta
+      name="description"
+      content="Quizly is a modern, responsive quiz app built with React, Vite, and Tailwind CSS. Test your knowledge, challenge yourself with fun questions, and track your best scores!"
+    />
+
+    <!-- ✅ Favicon & Theme -->
+    <link rel="icon" href="/assets/favicon-UwH6NUxZ.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#4f46e5" />
+
+    <!-- ✅ Open Graph (Social Sharing) -->
+    <meta property="og:title" content="Quizly — Interactive Quiz App" />
+    <meta
+      property="og:description"
+      content="A clean quiz app with responsive UI, smooth animations, and local high score tracking."
+    />
+    <meta property="og:image" content="/preview.png" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- ✅ Manifest (PWA Support) -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- ✅ Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ✅ Performance: Preload Main Script -->
+    <link rel="preload" href="data:text/jsx;base64,aW1wb3J0IFJlYWN0LCB7IFN1c3BlbnNlIH0gZnJvbSAicmVhY3QiOwppbXBvcnQgeyBjcmVhdGVSb290IH0gZnJvbSAicmVhY3QtZG9tL2NsaWVudCI7CmltcG9ydCBBcHAgZnJvbSAiLi9BcHAuanN4IjsKaW1wb3J0ICIuL2luZGV4LmNzcyI7CgovLyDwn5S5IFNpbXBsZSBlcnJvciBib3VuZGFyeQpjbGFzcyBFcnJvckJvdW5kYXJ5IGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHsKICBjb25zdHJ1Y3Rvcihwcm9wcykgewogICAgc3VwZXIocHJvcHMpOwogICAgdGhpcy5zdGF0ZSA9IHsgaGFzRXJyb3I6IGZhbHNlIH07CiAgfQoKICBzdGF0aWMgZ2V0RGVyaXZlZFN0YXRlRnJvbUVycm9yKCkgewogICAgcmV0dXJuIHsgaGFzRXJyb3I6IHRydWUgfTsKICB9CgogIGNvbXBvbmVudERpZENhdGNoKGVycm9yLCBpbmZvKSB7CiAgICBjb25zb2xlLmVycm9yKCJBcHAgY3Jhc2hlZDoiLCBlcnJvciwgaW5mbyk7CiAgfQoKICByZW5kZXIoKSB7CiAgICBpZiAodGhpcy5zdGF0ZS5oYXNFcnJvcikgewogICAgICByZXR1cm4gKAogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJoLXNjcmVlbiBmbGV4IGZsZXgtY29sIGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciB0ZXh0LWNlbnRlciBiZy1yZWQtNTAgdGV4dC1yZWQtNzAwIj4KICAgICAgICAgIDxoMSBjbGFzc05hbWU9InRleHQtM3hsIGZvbnQtYm9sZCI+4pqg77iPIFNvbWV0aGluZyB3ZW50IHdyb25nPC9oMT4KICAgICAgICAgIDxwIGNsYXNzTmFtZT0ibXQtMiB0ZXh0LWdyYXktNjAwIj4KICAgICAgICAgICAgUGxlYXNlIHJlZnJlc2ggdGhlIHBhZ2UgYW5kIHRyeSBhZ2Fpbi4KICAgICAgICAgIDwvcD4KICAgICAgICA8L2Rpdj4KICAgICAgKTsKICAgIH0KICAgIHJldHVybiB0aGlzLnByb3BzLmNoaWxkcmVuOwogIH0KfQoKY3JlYXRlUm9vdChkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgicm9vdCIpKS5yZW5kZXIoCiAgPFJlYWN0LlN0cmljdE1vZGU+CiAgICA8RXJyb3JCb3VuZGFyeT4KICAgICAgPFN1c3BlbnNlCiAgICAgICAgZmFsbGJhY2s9ewogICAgICAgICAgPGRpdiBjbGFzc05hbWU9Imgtc2NyZWVuIGZsZXggZmxleC1jb2wgaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHRleHQtZ3JheS02MDAiPgogICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtbGcgYW5pbWF0ZS1wdWxzZSI+4o+zIExvYWRpbmcuLi48L3NwYW4+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICB9CiAgICAgID4KICAgICAgICA8QXBwIC8+CiAgICAgIDwvU3VzcGVuc2U+CiAgICA8L0Vycm9yQm91bmRhcnk+CiAgPC9SZWFjdC5TdHJpY3RNb2RlPgopOwo=" as="script" type="module" />
+
+    <style>
+      /* Skeleton loading animation */
+      @keyframes pulse {
+        0% {
+          opacity: 0.6;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.6;
+        }
+      }
+      .skeleton {
+        background: linear-gradient(90deg, #e0e7ff, #c7d2fe, #e0e7ff);
+        background-size: 200% 100%;
+        border-radius: 0.75rem;
+        animation: pulse 1.8s infinite ease-in-out;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-BWa8LPfA.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-HQ9Af6ec.css">
+  </head>
+
+  <body
+    class="antialiased bg-gradient-to-br from-indigo-100 via-purple-100 to-cyan-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 text-gray-900 dark:text-gray-100"
+  >
+    <!-- ✅ Loading Skeleton -->
+    <div id="root">
+      <div class="h-screen flex flex-col items-center justify-center gap-6">
+        <div class="skeleton h-10 w-40"></div>
+        <div class="skeleton h-6 w-64"></div>
+        <div class="skeleton h-6 w-52"></div>
+        <div class="skeleton h-48 w-80"></div>
+      </div>
+    </div>
+
+    <!-- ✅ Main Entry -->
+  </body>
+</html>
